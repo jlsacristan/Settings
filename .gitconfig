@@ -22,13 +22,13 @@
 [help]
 	autocorrect = 20
 [alias]
-    ch = checkout
+        ch = checkout
 	st = status
 	br = branch
 	cm = commit
-    l = log
+        l = log
 	df = diff
-    lg = log --pretty=format:'%h - %an, %ar : %s' --graph
-    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative --branches
+    	lg = log --pretty=format:'%h - %an, %ar : %s' --graph
+    	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative --branches
 	last = log -1 HEAD
 	
