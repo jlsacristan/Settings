@@ -27,8 +27,8 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    // cursorColor: 'rgba(248,28,229,0.8)',
-    cursorColor: '#1DC121',	
+    cursorColor: 'rgba(248,28,229,0.8)',
+    //cursorColor: '#1DC121',	
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -37,7 +37,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -51,6 +51,20 @@ module.exports = {
 
     // border color (window, tabs)
     borderColor: '#333',
+	
+    // opacity plugin
+    opacity: {
+      focus: 1,
+      blur: 0.4,
+    },
+	
+	// extension for Hyper that allows you to search text in your terminal
+    hyperSearchUI: {
+      buttonBorderRadius: 2,
+	  buttonMargin: 2,
+	  prevButton: '←',
+      nextButton: '→',
+    },	
 
     // custom CSS to embed in the main window
     css: '',
@@ -151,12 +165,16 @@ module.exports = {
     "hyperpower",
     "hypercwd",
     "hyper-pane",
-    "hyperborder",
-    "hyper-snazzy",
     "hyper-dracula",
+    "hyper-opacity",
+    "hyperborder",
     "hyperlinks",
+    "hyper-statusline",
     "hyper-tab-icons",
-    "hyper-dark-scrollbar"
+    "hyper-dark-scrollbar",
+    "hyper-savetext",
+	"hyper-search",
+    "gitrocket"
   ],
 
   // in development, you can create a directory under
@@ -165,7 +183,57 @@ module.exports = {
   localPlugins: [],
 
   keymaps: {
-    // Example
-    'window:devtools': 'Ctrl+Shift+I'
-  },
+  "window:devtools": "ctrl+shift+i",
+  "window:reload": "ctrl+shift+r",
+  "window:reloadFull": "ctrl+shift+f5",
+  "window:preferences": "ctrl+,",
+  "window:hamburgerMenu": "alt",
+  "zoom:reset": "ctrl+0",
+  "zoom:in": "ctrl+=",
+  "zoom:out": "ctrl+-",
+  "window:new": "ctrl+shift+n",
+  "window:minimize": "ctrl+shift+m",
+  "window:zoom": "ctrl+shift+alt+m",
+  "window:toggleFullScreen": "f11",
+  "window:close": [
+    "ctrl+shift+q",
+    "alt+f4"
+  ],
+  "tab:new": "ctrl+shift+t",
+  "tab:next": [
+    "ctrl+shift+]",
+    "ctrl+shift+right",
+    "ctrl+alt+right",
+    "ctrl+tab"
+  ],
+  "tab:prev": [
+    "ctrl+shift+[",
+    "ctrl+shift+left",
+    "ctrl+alt+left",
+    "ctrl+shift+tab"
+  ],
+  "tab:jump:prefix": "ctrl",
+  "pane:next": "ctrl+pageup",
+  "pane:prev": "ctrl+pagedown",
+  "pane:splitVertical": "ctrl+shift+d",
+  "pane:splitHorizontal": "ctrl+shift+e",
+  "pane:close": "ctrl+shift+w",
+  "editor:undo": "ctrl+shift+z",
+  "editor:redo": "ctrl+shift+y",
+  "editor:cut": "ctrl+shift+x",
+  "editor:copy": "ctrl+shift+c",
+  "editor:paste": "ctrl+shift+v",
+  "editor:selectAll": "ctrl+shift+a",
+  "editor:movePreviousWord": "ctrl+left",
+  "editor:moveNextWord": "ctrl+right",
+  "editor:moveBeginningLine": "Home",
+  "editor:moveEndLine": "End",
+  "editor:deletePreviousWord": "ctrl+backspace",
+  "editor:deleteNextWord": "ctrl+del",
+  "editor:deleteBeginningLine": "ctrl+home",
+  "editor:deleteEndLine": "ctrl+end",
+  "editor:clearBuffer": "ctrl+shift+k",
+  "editor:break": "ctrl+c",
+  "plugins:update": "ctrl+shift+u"
+},
 };
