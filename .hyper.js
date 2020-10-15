@@ -58,11 +58,11 @@ module.exports = {
       blur: 0.4,
     },
 	
-	// extension for Hyper that allows you to search text in your terminal
+    // extension for Hyper that allows you to search text in your terminal
     hyperSearchUI: {
       buttonBorderRadius: 2,
-	  buttonMargin: 2,
-	  prevButton: '←',
+      buttonMargin: 2,
+      prevButton: '←',
       nextButton: '→',
     },	
 
@@ -173,7 +173,7 @@ module.exports = {
     "hyper-tab-icons",
     "hyper-dark-scrollbar",
     "hyper-savetext",
-	"hyper-search",
+    "hyper-search",
     "gitrocket"
   ],
 
@@ -236,4 +236,5 @@ module.exports = {
   "editor:break": "ctrl+c",
   "plugins:update": "ctrl+shift+u"
 },
+
 };
